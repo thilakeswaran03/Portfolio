@@ -1,5 +1,5 @@
 const typingText = document.getElementById('typing-text');
-const phrases = ['Full-Stack Developer', 'Problem Solver'];
+const phrases = ['Full-Stack Developer', 'Problem Solver', 'Machine Learning Enthusiast'];
 let i = 0, j = 0, isDeleting = false;
 
 function typeEffect() {
