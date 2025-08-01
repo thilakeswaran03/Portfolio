@@ -3,181 +3,422 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thilakeswaran KP</title>
+  <title>Futuristic Digital Storybook</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body data-theme="dark">
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo">TKP</div>
+<body>
+    <div class="cursor"></div>
+    <div class="bg-animation"></div>
 
-      <!-- Hamburger Menu Button -->
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link ">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#resume" class="nav-link">Resume</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero visible">
-    <div class="hero-content">
-      <div class="profile-pic">
-        <img src="assests/IMG_0644.JPG" alt="PIC">
-      </div>
-      <h1>Thilakeswaran KP</h1>
-      <div class="typing-text" id="typing-text">Tech Enthusiast</div>
-      <a href="#projects" class="cta-button">View My Work</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="visible">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <div>
-        <p class="about-text">I'm Thilakeswaran KP, a third-year student pursuing Artificial Intelligence and Data Science at Saveetha Engineering College. I have a strong passion for solving real-world problems using data, intelligent systems, and user-centered design. My interests lie in machine learning, web development, and UI/UX design, and I enjoy blending these skills to build practical, impactful solutions.</p>
-        <p class="about-text">So far, I’ve worked on projects like a Course Eligibility Checker for academic advising, a Resume Analyzer and Job Matcher using ML and NLP, and a tool to extract handwritten register numbers from scanned exam papers using OCR techniques. I also designed and built my own portfolio website from scratch to reflect my learning journey and skill set.</p>
-        <p class="about-text">I'm always eager to learn new technologies and improve my craft. Whether it’s designing intuitive user experiences or training models that understand data, I enjoy every part of the development process. I look forward to collaborating on innovative projects and growing as a developer and problem solver.</p>
-      </div>
-      <div class="skills">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Canva</div>
-        <div class="skill">Python</div>
-        <div class="skill">Java</div>
-        <div class="skill">C++</div>
-        <div class="skill">MongoDB</div>
-        <div class="skill">Scikit-learn</div>
-        <div class="skill">Tensorflow</div>
-        <div class="skill">PyTorch</div>
-        <div class="skill">Data Visualization</div>
-        <div class="skill">Git</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="visible">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">📊</div>
-        <div class="project-content">
-          <h3 class="project-title">Course Eligibility Checker</h3>
-          <p class="project-description">
-            A web app that checks student eligibility for courses based on curriculum rules and completed credits. It features a dynamic UI and backend built with Flask, Excel integration, and ML/NLP-based course name matching.
-          </p>
-          <div class="project-links">
-            <a href="#" class="project-link">Live Demo</a>
-            <a href="#" class="project-link">GitHub</a>
-          </div>
+    <div class="main-container">
+        <!-- Navigation Dots -->
+        <div class="nav-container-text">
+            <span class="nav-link active" data-section="hero">Home</span>
+            <span class="nav-separator"></span>
+            <span class="nav-link" data-section="about">About</span>
+            <span class="nav-separator"></span>
+            <span class="nav-link" data-section="skills">Skills</span>
+            <span class="nav-separator"></span>
+            <span class="nav-link" data-section="projects">Projects</span>
+            <span class="nav-separator"></span>
+            <span class="nav-link" data-section="certifications">Certifications</span>
+            <span class="nav-separator"></span>
+            <!-- <span class="nav-link" data-section="experience">Experience</span> 
+            <span class="nav-separator"></span>-->
+            <span class="nav-link" data-section="contact">Contact</span>
         </div>
-      </div>
 
-      <div class="project-card">
-        <div class="project-image">🧾</div>
-        <div class="project-content">
-          <h3 class="project-title">Register Number Extraction (OCR)</h3>
-          <p class="project-description">
-            A tool to extract handwritten register numbers from scanned exam scripts using image processing. Developed with PyQt5, OpenCV, and CNN-based object detection methods.
-          </p>
-          <div class="project-links">
-            <a href="#" class="project-link">Live Demo</a>
-            <a href="#" class="project-link">GitHub</a>
+        <!-- Hero Section -->
+        <section class="section" id="hero">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="section-content">
+                <div class="hero-content">
+                    <div class="hero-avatar">
+                      <img src="assests/IMG_0644.JPG" alt="PIC">
+                    </div>
+                    <h1 class="hero-title">Thilakeswaran KP</h1>
+                    <!-- <p class="hero-subtitle">Digital Architect & Quantum Developer</p> -->
+                    <div class="typing-text hero-subtitle" id="typing-text">Tech Enthusiast</div>
+                    <div class="glass-card">
+                        <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); text-align: center;">
+                            I'm a third-year student pursuing Artificial Intelligence and Data Science at Saveetha Engineering College. I have a strong passion for solving real-world problems using data, intelligent systems, and user-centered design. My interests lie in machine learning, web development, and UI/UX design, and I enjoy blending these skills to build practical, impactful solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-content">
+                <h2 class="section-title">NEURAL PROFILE</h2>
+                <div class="about-grid">
+                    <!-- <div class="about-image">🧠</div> -->
+                    <div class="about-image">
+                      <img src="assests/IMG_0644.JPG" alt="PIC">
+                    </div>
+                    <div class="glass-card">
+                        <div class="about-text">
+                            <p>I'm always eager to learn new technologies and improve my craft. Whether it’s designing intuitive user experiences or training models that understand data, I enjoy every part of the development process. I look forward to collaborating on innovative projects and growing as a developer and problem solver.</p>
+                            <br>
+                            <p>So far, I’ve worked on projects like a Course Eligibility Checker for academic advising, a Resume Analyzer and Job Matcher using ML and NLP, and a tool to extract handwritten register numbers from scanned exam papers using OCR techniques. I also designed and built my own portfolio website from scratch to reflect my learning journey and skill set.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
+            </div>
+        </section>
+
+        <!-- Skills Carousel Section -->
+        <section class="section carousel-section" id="skills">
+          <div class="section-content">
+            <h2 class="section-title">SKILL MATRIX</h2>
+            <div class="skill-carousel-wrapper">
+              <div class="skill-carousel" id="skillCarousel">
+                <!-- Each skill-card -->
+                <div class="skill-card glass-card">
+                  <div class="skill-icon">🌐</div>
+                  <h3 class="skill-title">Quantum Web</h3>
+                  <p class="skill-description">HTML, CSS, JavaScript</p>
+                </div>
+
+                <div class="skill-card glass-card">
+                  <div class="skill-icon">🎨</div>
+                  <h3 class="skill-title">Design Protocol</h3>
+                  <p class="skill-description">Canva, UI/UX Concepts</p>
+                </div>
+
+                <div class="skill-card glass-card">
+                  <div class="skill-icon">🐍</div>
+                  <h3 class="skill-title">Python Core</h3>
+                  <p class="skill-description">Python, Scikit-learn, TensorFlow, PyTorch</p>
+                </div>
+
+                <div class="skill-card glass-card">
+                  <div class="skill-icon">📦</div>
+                  <h3 class="skill-title">Quantum Systems</h3>
+                  <p class="skill-description">Java, C++, Git, MongoDB</p>
+                </div>
+
+                <div class="skill-card glass-card">
+                  <div class="skill-icon">📊</div>
+                  <h3 class="skill-title">Data Vision</h3>
+                  <p class="skill-description">Data Visualization, Model Tuning</p>
+                </div>
+              </div>
+          
+              <!-- Manual Navigation Buttons -->
+              <button class="carousel-button prev" onclick="manualShift(-1)">‹</button>
+              <button class="carousel-button next" onclick="manualShift(1)">›</button>
+            </div>
+            <div class="section-divider"></div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="project-card">
-        <div class="project-image">🖥️</div>
-        <div class="project-content">
-          <h3 class="project-title">Personal Portfolio Website</h3>
-          <p class="project-description">
-            A responsive website designed using Figma and built with HTML and CSS to showcase personal projects, skills, and contact details with clean UI and visual hierarchy.
-          </p>
-          <div class="project-links">
-            <a href="#" class="project-link">Live Demo</a>
-            <a href="#" class="project-link">GitHub</a>
+        <!-- Projects Carousel Section -->
+        <section class="section carousel-section" id="projects">
+          <div class="section-content">
+            <h2 class="section-title">QUANTUM PROJECTS</h2>
+          
+            <div class="carousel-container project-carousel">
+              <!-- Projects Page 1 -->
+              <div class="carousel-page active" data-carousel="projects" data-page="0">
+                <div class="carousel-content">
+                  <div class="project-card glass-card">
+                    <h3 class="project-title">Course Eligibility Checker</h3>
+                    <p class="project-description">
+                      A full-stack web application designed to automate the process of checking student eligibility for academic courses based on university curriculum regulations and completed credit history.
+                      The application combines an intuitive, dynamic frontend interface with a powerful Flask-based backend, providing an efficient solution for both students and academic administrators.
+                    </p>
+                    <div class="project-tags">
+                      <span class="project-tag">Flask</span>
+                      <span class="project-tag">HTML</span>
+                      <span class="project-tag">CSS</span>
+                      <span class="project-tag">JavaScript</span>
+                      <span class="project-tag">Machine Learning</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Projects Page 2 -->
+              <div class="carousel-page" data-carousel="projects" data-page="1">
+                <div class="carousel-content">
+                  <div class="project-card glass-card">
+                    <h3 class="project-title">Register Number Extraction (OCR)</h3>
+                    <p class="project-description">
+                      A specialized desktop tool built to automate the extraction of handwritten register numbers from scanned examination answer scripts. 
+                      This application streamlines the manual task of identifying and recording register numbers, which is essential for digitizing and organizing student exam data efficiently.
+                    </p>
+                    <div class="project-tags">
+                      <span class="project-tag">PyQt5</span>
+                      <span class="project-tag">TensorFlow/Keras </span>
+                      <span class="project-tag">PyMuPDF (fitz)</span>
+                      <span class="project-tag">OpenCV</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Projects Page 3 -->
+              <div class="carousel-page" data-carousel="projects" data-page="2">
+                <div class="carousel-content">
+                  <div class="project-card glass-card">
+                    <h3 class="project-title">Resume Analyzer & Job Matcher</h3>
+                    <p class="project-description">
+                      A machine learning–driven web application designed to intelligently parse resumes, extract key information, and recommend suitable job roles based on content analysis and natural language processing (NLP).
+                      This system simplifies the recruitment workflow by automating resume screening and aligning candidate profiles with relevant job categories.
+                    </p>
+                    <div class="project-tags">
+                      <span class="project-tag">Scikit-learn</span>
+                      <span class="project-tag">SpaCy</span>
+                      <span class="project-tag">pdfplumber</span>
+                      <span class="project-tag">Transformers (BERT/RoBERTa)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects Page 4 -->
+              <div class="carousel-page" data-carousel="projects" data-page="3">
+                <div class="carousel-content">
+                  <div class="project-card glass-card">
+                    <h3 class="project-title">Smart Email Assistant</h3>
+                    <p class="project-description">
+                      The Smart Email Assistant is an intelligent, real-time notification system designed to help users stay updated on the emails that matter most to them. 
+                      Unlike traditional email filters, it uses conversational goal setting, language models, and multi-channel alerts to deliver personalized and context-aware updates in a friendly, local tone.
+                    </p>
+                    <div class="project-tags">
+                      <span class="project-tag">FastAPI </span>
+                      <span class="project-tag">Mixtral via Groq API</span>
+                      <span class="project-tag">CSS (Tailwind)</span>
+                      <span class="project-tag">Vanilla JavaScrip</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Navigation -->
+              <button class="carousel-button prev" onclick="prevCarouselPage('projects')">‹</button>
+              <button class="carousel-button next" onclick="nextCarouselPage('projects')">›</button>
+            
+              <div class="carousel-nav">
+                <div class="carousel-dot active" data-carousel="projects" data-page="0"></div>
+                <div class="carousel-dot" data-carousel="projects" data-page="1"></div>
+                <div class="carousel-dot" data-carousel="projects" data-page="2"></div>
+              </div>
+            </div>
+          
+            <div class="section-divider"></div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="project-card">
-        <div class="project-image">🧠</div>
-        <div class="project-content">
-          <h3 class="project-title">Resume Analyzer & Job Matcher</h3>
-          <p class="project-description">
-            An ML-powered web app to parse resumes, extract information, and recommend job roles using NLP and job category classification. Features resume upload and ML-based backend processing.
-          </p>
-          <div class="project-links">
-            <a href="#" class="project-link">Live Demo</a>
-            <a href="#" class="project-link">GitHub</a>
+        <!-- Certifications Carousel Section -->
+        <section class="section carousel-section" id="certifications">
+          <div class="section-content">
+            <h2 class="section-title">QUANTUM CERTIFICATIONS</h2>
+          
+            <!-- Carousel Wrapper -->
+            <div class="cert-carousel-wrapper">
+              <div class="cert-carousel" id="certCarousel">
+                <!-- Each Certification Card -->
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🏆</div>
+                  <h3 class="cert-title">Mastering Machine Learning</h3>
+                  <p class="cert-issuer">Udemy</p>
+                  <p class="cert-date">2025</p>
+                  <p class="cert-description">Machine Learning from basics to breakthroughs</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">⚡</div>
+                  <h3 class="cert-title">OOPs in Python</h3>
+                  <p class="cert-issuer">Great Learning</p>
+                  <p class="cert-date">2024</p>
+                  <p class="cert-description">Object Oriented Programming in Python language</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🔮</div>
+                  <h3 class="cert-title">Foundations and Core Concepts of PyTorch</h3>
+                  <p class="cert-issuer">Coursera (packt)</p>
+                  <p class="cert-date">Apr 3, 2025</p>
+                  <p class="cert-description">Quantum algorithms, quantum machine learning, and quantum cryptography</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🚀</div>
+                  <h3 class="cert-title">Static Website</h3>
+                  <p class="cert-issuer">NXT Wave</p>
+                  <p class="cert-date">May 27, 2025</p>
+                  <p class="cert-description">Advanced React patterns, performance optimization, and modern web development</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🚀</div>
+                  <h3 class="cert-title">Microsoft Operating System Installation</h3>
+                  <p class="cert-issuer">Infosys | Springboard</p>
+                  <p class="cert-date">May 16, 2024</p>
+                  <p class="cert-description">Advanced React patterns, performance optimization, and modern web development</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🚀</div>
+                  <h3 class="cert-title">Building and Training Neural Networks</h3>
+                  <p class="cert-issuer">Coursera (packt)</p>
+                  <p class="cert-date">May 14, 2025</p>
+                  <p class="cert-description">Advanced React patterns, performance optimization, and modern web development</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🚀</div>
+                  <h3 class="cert-title">Basics of Computer Networking</h3>
+                  <p class="cert-issuer">Great Learning</p>
+                  <p class="cert-date">May, 2025</p>
+                  <p class="cert-description">Advanced React patterns, performance optimization, and modern web development</p>
+                </div>
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">🚀</div>
+                  <h3 class="cert-title">Advanced PyTorch Techniques and Applications</h3>
+                  <p class="cert-issuer">Coursera (packt)</p>
+                  <p class="cert-date">June 03, 2025</p>
+                  <p class="cert-description">Advanced React patterns, performance optimization, and modern web development</p>
+                </div>
+              </div>
+            
+              <!-- Navigation Buttons -->
+              <button class="carousel-button prev" onclick="manualCertShift(-1)">‹</button>
+              <button class="carousel-button next" onclick="manualCertShift(1)">›</button>
+            </div>
+          
+            <div class="section-divider"></div>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
 
-  </section>
+        <!-- Experience Section 
+        <section class="section" id="experience">
+            <div class="section-content">
+                <h2 class="section-title">QUANTUM TIMELINE</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024 - Present</div>
+                            <h3 class="timeline-title">Senior Quantum Architect</h3>
+                            <p class="timeline-description">
+                                Leading development of multi-dimensional web applications and mentoring 
+                                junior neural developers at QuantumCorp Industries.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022 - 2024</div>
+                            <h3 class="timeline-title">Holographic Developer</h3>
+                            <p class="timeline-description">
+                                Developed immersive 3D web experiences and improved quantum user interfaces 
+                                for over 500k interdimensional users.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020 - 2022</div>
+                            <h3 class="timeline-title">Neural Interface Designer</h3>
+                            <p class="timeline-description">
+                                Designed quantum user interfaces and conducted neural research for mobile 
+                                and holographic applications at FutureTech Labs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
+            </div>
+        </section>-->
 
-  <!-- Resume Section -->
-  <section id="resume" class="visible">
-    <h2 class="section-title">Resume</h2>
-    <div class="resume-content">
-      <p class="resume-description">Download my complete resume to learn more about my experience, education, and technical skills.</p>
-      <div class="resume-buttons">
-        <a href="assests/Thilakeswaran-KP-Resume.pdf" class="download-btn" target="_blank">👁️ View Resume</a>
-        <a href="assests/Thilakeswaran-KP-Resume.pdf" class="download-btn" download>📄 Download Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="visible">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-content">
-
-      <div class="contact-item">
-        <div class="contact-icon">📧</div>
-        <h3 class="contact-title">Email</h3>
-        <a href="mailto:thilakeswarankp@gmail.com" class="contact-link">thilakeswarankp@gmail.com</a>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">💼</div>
-        <h3 class="contact-title">LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/thilakeswaran/" target="_blank" class="contact-link">linkedin.com/in/thilakeswaran</a>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">🐱</div>
-        <h3 class="contact-title">GitHub</h3>
-        <a href="https://github.com/thilakeswaran03" target="_blank" class="contact-link">github.com/thilakeswaran03</a>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">✖️</div>
-        <h3 class="contact-title">X</h3>
-        <a href="https://x.com/Thilakeswarankp" target="_blank" class="contact-link">x.com/Thilakeswarankp</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Thilakeswaran KP. All rights reserved. Built with passion and lots of coffee ☕</p>
-  </footer>
-
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+          <div class="section-content">
+            <h2 class="section-title">NEURAL LINK</h2>
+          
+            <div class="contact-grid">
+              <!-- Left Box: Info -->
+              <div class="contact-info glass-card">
+                <div class="contact-item">
+                  <div class="contact-icon">📧</div>
+                  <div>
+                    <strong style="color: #00d4ff;">Email</strong><br>
+                    <a href="mailto:thilakeswarankp@gmail.com" class="contact-link" style="color:#00d4ff;">thilakeswarankp@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">🔗</div>
+                  <div>
+                    <strong style="color: #00d4ff;">LinkedIn</strong><br>
+                    <a href="https://www.linkedin.com/in/thilakeswaran/" target="_blank" style="color:#00d4ff;">linkedin.com/in/thilakeswaran<</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">🐱</div>
+                  <div>
+                    <strong style="color: #00d4ff;">GitHub</strong><br>
+                    <a href="https://github.com/thilakeswaran03" target="_blank" style="color:#00d4ff;">github.com/thilakeswaran03</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">🐱</div>
+                  <div>
+                    <strong style="color: #00d4ff;">X</strong><br>
+                    <a href="https://x.com/Thilakeswarankp" target="_blank" style="color:#00d4ff;">x.com/Thilakeswarankp</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">📱</div>
+                  <div>
+                    <strong style="color: #00d4ff;">Contact</strong><br>
+                    +91-6374087554
+                  </div>
+                </div>
+              
+                <div style="text-align: center; margin-top: 30px;">
+                  <div class="resume-buttons">
+                    <a href="assests/Thilakeswaran-KP-Resume.pdf" class="download-button" target="_blank">👁️ View Resume</a>
+                    <a href="assests/Thilakeswaran-KP-Resume.pdf" class="download-button" download>📄 Download Resume</a>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Right Box: Form -->
+              <div class="contact-form glass-card">
+                <form onsubmit="handleSubmit(event)">
+                  <h3 class="form-title">Work Together</h3>
+                  <div class="form-group">
+                    <label for="name">Your ID</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Your Address</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Transmission Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="submit-button">Send Quantum Signal</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          
+            <div class="section-divider"></div>
+          </div>
+        </section>
+        
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
